@@ -6,7 +6,6 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
@@ -14,7 +13,7 @@ import javax.sql.DataSource;
 
 @Configuration
 @EnableWebMvc
-@ComponentScan(basePackages = "com")
+@ComponentScan("com")
 public class MyAppConfiguration {
 
     @Bean
@@ -40,7 +39,7 @@ public class MyAppConfiguration {
         dataSource.setPassword("1983");
         dataSource.setDriverClassName("org.postgresql.Driver");
 
-        return  dataSource;
+        return dataSource;
 
     }
 

@@ -1,6 +1,5 @@
 package com.config;
 
-import com.controller.LoginController;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
 
@@ -8,8 +7,10 @@ public class MyAppInitializer extends AbstractAnnotationConfigDispatcherServletI
 
     @Override
     protected Class<?>[] getRootConfigClasses() {
-        return new Class[0];
+        return null;
+
     }
+
 
     @Override
     protected String[] getServletMappings() {
@@ -20,7 +21,7 @@ public class MyAppInitializer extends AbstractAnnotationConfigDispatcherServletI
 
     @Override
     protected Class<?>[] getServletConfigClasses() {
-        Class[] configFiles = {MyAppConfiguration.class, LoginController.class};
+        Class[] configFiles = {MyAppConfiguration.class};
 
         return configFiles;
     }
